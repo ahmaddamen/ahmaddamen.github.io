@@ -215,24 +215,7 @@
                 $popupTriggerClose = $('.popup-trigger-close');
         
             $popupTrigger.on('click', function(e){
-                $.magnificPopup.open({
-                    items: {
-                        src: $(this).closest('.popup-container').find('.popup-content')
-                    },
-                    type: 'inline',
-                    fixedContentPos: true,
-                    closeOnContentClick: false,
-                    callbacks: {
-                        open: function () {
-                            $('.mfp-wrap').addClass('popup-wrap');
-                        },
-                        close: function () {
-                            $('.mfp-wrap').removeClass('popup-wrap');
-                        }
-                    }
-                });
-                
-                e.preventDefault();
+               
             });
             
             $popupTriggerClose.on('click', function(e){
