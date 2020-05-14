@@ -3467,7 +3467,6 @@ padding-bottom: 70px
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    min-width: 50%;
     min-height: 100vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3506,7 +3505,7 @@ padding-bottom: 70px
 }
 
 .blog-img.fix {
-    left: 48px;
+    left: 78px;
     z-index: 2; 
     padding-left: 44px; 
 }
