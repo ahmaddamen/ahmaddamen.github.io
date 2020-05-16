@@ -645,7 +645,7 @@ i-circled {
 }
 .split-image.hero-1 {
     height: 100vh;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, .3), hsla(0, 0%, 100%, 0) 25%), url(https://ahmaddamen.github.io/assets/ahImages/Main.jpg);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, .3), hsla(0, 0%, 100%, 0) 25%), url(http://ahmaddamen.github.io/assets/ahImages/Main.jpg);
     background-position: 0px 0px, 50% 0px;
     background-size: auto, cover;
     background-repeat: repeat, no-repeat;
