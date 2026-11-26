@@ -3,9 +3,24 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Ahmad Damen - Personal Webpage</title>
+    <title>Ahmad Damen</title>
     <meta name="google-site-verification" content="-O_SZyD-CYIfeFXFu4_qMB0tQ9-VdxoJkOZDFMSHKbw" />
-    <meta name="description" content="Maron - One Page Personal Themplate"/>
+    <meta name="description" content="Ahmad Damen | Journalism, podcasts, documentary filmmaking, music and sound design."/>
+    <link rel="canonical" href="https://ahmaddamen.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ahmaddamen.github.io/">
+    <meta property="og:site_name" content="Ahmad Damen">
+    <meta property="og:title" content="Ahmad Damen">
+    <meta property="og:description" content="Ahmad Damen | Journalism, podcasts, documentary filmmaking, music and sound design.">
+    <meta property="og:image" content="https://ahmaddamen.github.io/assets/ahImages/2026oud.jpg">
+    <meta property="og:image:secure_url" content="https://ahmaddamen.github.io/assets/ahImages/2026oud.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Ahmad Damen playing the oud">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Ahmad Damen">
+    <meta name="twitter:description" content="Ahmad Damen | Journalism, podcasts, documentary filmmaking, music and sound design.">
+    <meta name="twitter:image" content="https://ahmaddamen.github.io/assets/ahImages/2026oud.jpg">
+    <meta name="twitter:image:alt" content="Ahmad Damen playing the oud">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
@@ -13,7 +28,8 @@
     <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico"> 
+    <link rel="icon" type="image/jpeg" href="https://ahmaddamen.github.io/assets/ahImages/2026oud.jpg">
+    <link rel="apple-touch-icon" href="https://ahmaddamen.github.io/assets/ahImages/2026oud.jpg"> 
     
     <!-- Loading Font Icons -->
     <link href="assets/plugins/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css">
@@ -49,6 +65,50 @@
                 left: auto !important;
                 margin: 0;
                 z-index: 2;
+            }
+        }
+    </style>
+
+
+    <style>
+        /* Desktop: let the portrait determine its own height; no letterboxing. */
+        .desktop-hero-portrait { display: none; }
+        @media (min-width: 992px) {
+            #home > .container-fluid > .row {
+                display: flex;
+                align-items: stretch;
+            }
+            #home > .container-fluid > .row > .col-md-6 {
+                float: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-width: 0;
+            }
+            #home .split-image.hero-1 {
+                background-image: none !important;
+                width: 100%;
+                height: auto !important;
+                min-height: 0 !important;
+                max-height: none !important;
+                padding: 0 !important;
+                position: relative;
+                overflow: visible;
+            }
+            #home .desktop-hero-portrait {
+                display: block;
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+            }
+            #home .hero-split-content {
+                height: auto !important;
+                min-height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-top: 50px;
+                padding-bottom: 85px;
             }
         }
     </style>
@@ -135,7 +195,7 @@
 
                         <div class="col-md-6">
                             <div class="split-image hero-1"  style="background-image: linear-gradient(0deg, rgba(0, 0, 0, .3), hsla(0, 0%, 100%, 0) 25%), url('./assets/ahImages/2026oud.jpg');">
-                             <!--   <img class="img-responsive" src="assets/ahImages/2026oud.jpg"/>-->
+                             <img class="desktop-hero-portrait" src="assets/ahImages/2026oud.jpg" alt="Ahmad Damen playing the oud">
                             </div>
                         </div>
 
