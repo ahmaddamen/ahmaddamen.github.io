@@ -46,6 +46,74 @@
     text-align: left !important;
     direction: ltr !important;
 }
+
+/* NPR portfolio: two editorial columns, scoped to this section only. */
+.npr-story-columns {
+    display: flex;
+    align-items: stretch;
+    gap: 18px;
+    max-width: 100%;
+}
+.npr-story-column { flex: 1 1 0; min-width: 0; }
+.npr-story-divider { flex: 0 0 1px; background: #dedee4; }
+.npr-program-banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 0 12px;
+}
+.npr-story-columns .npr-story {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-bottom: 1px solid #dedee4;
+}
+.npr-story-columns .npr-story-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 9px;
+    min-height: 64px;
+    padding: 12px 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.25px;
+    color: #17171b;
+    text-decoration: none !important;
+    border: 0 !important;
+    background: transparent;
+    overflow-wrap: anywhere;
+    transition: color .18s ease, background-color .18s ease;
+}
+.npr-story-columns .npr-story-link::after {
+    content: "\2197";
+    flex: 0 0 auto;
+    color: #625cf6;
+    font-size: 16px;
+    font-weight: 400;
+}
+.npr-story-columns .npr-story-link:hover,
+.npr-story-columns .npr-story-link:focus-visible {
+    color: #5149d9;
+    background: rgba(98, 92, 246, .055);
+}
+.npr-story-columns .npr-story-link:focus-visible {
+    outline: 2px solid #625cf6;
+    outline-offset: 2px;
+}
+@media (max-width: 767px) {
+    .npr-story-columns { gap: 10px; }
+    .npr-story-columns .npr-story-link {
+        font-size: 16px;
+        line-height: 1.4;
+        min-height: 58px;
+        gap: 5px;
+        padding: 10px 1px;
+    }
+    .npr-story-columns .npr-story-link::after { font-size: 13px; }
+}
+
 </style>
 
 </head>
@@ -68,7 +136,7 @@
         <div class="logo text-center">
             <div class="display-table height-100 width-100">
                 <div class="display-table-cell vertical-align-middle">
-                    <img src="assets/ahImages/logo3.jpg" alt="">
+                    <img src="assets/ahImages/logo2026.jpg" alt="">
                 </div>
                 <!-- //.display-table-cell -->
             </div>
@@ -145,23 +213,33 @@
                                 <p class="badge color">Podcasts</p>
                                 <h1 class="heading">Podcast Lead</h1>
                                 <p class="grey-text"><b> <a href="https://www.ambies.com/2026-ambies-nominees" target="_blank" class="link-v2">Nominee: The Ambies - Best News & Politics Podcast</a><br></b></p>
-                                <p class="grey-text"><b> <a href="https://winners.webbyawards.com/2024/podcasts/individual-episodes/documentary-ind-episodes/282301/chapters-last-day-in-kojo" target="_blank" class="link-v2">Winner: Webby Awards - People's Voice Award</a><br></b></p> 
-                                <p class="grey-text"><b> <a href="https://www.signalaward.com/winners/details/#middle-east-broadcasting-networks-inc/american-highlights-the-journey/0/381721" target="_blank" class="link-v2">Winner: Signal Awards 2022 - Best Editing (Bronze)</a><br></b></p>    
+                                <p class="grey-text"><b> Winner: Webby Awards 2024 - People's Voice Award</a><br></b></p> 
+                                <p class="grey-text"><b> Winner: Signal Awards 2022 - Best Editing (Bronze)</a><br></b></p>    
                                 <p class="grey-text"><b>Shortlisted for AIB Media Excellence Awards 2022 - Best Factual Podcast</b></p>
                                 <div class="english-feature">NPR Podcasts</div>
-                                <div style="display: flex; align-items: flex-start; gap: 18px; max-width: 100%;">
-                                    <div style="flex: 1; min-width: 0;">
-                                        <img src="assets\ahImages\hereandnow_banner.png" alt="NPR's Here&Now" style="height: 50px; width: auto; max-width: 100%;">
-                                        <p></p>
-                                        <p class="grey-text"><a href="https://www.wbur.org/hereandnow/2024/04/11/gaza-family-egypt" target="_blank" class="link-v2">Leaving Gaza: one family's future</a></p> 
-                                        <p class="grey-text"><a href="https://www.wbur.org/hereandnow/2024/04/01/war-protests-israel" target="_blank" class="link-v2">Palestinians Inside Israel raise their voice</a></p>
-                                        <p class="grey-text"><a href="https://www.wbur.org/hereandnow/2024/04/15/sudan-civil-war-american" target="_blank" class="link-v2">A year into Sudan's civil war</a></p>
+                                <div class="npr-story-columns">
+                                    <div class="npr-story-column">
+                                        <img src="assets\ahImages\hereandnow_banner.png" alt="NPR's Here&Now" class="npr-program-banner">
+                                        <p class="npr-story"><a href="https://www.wbur.org/hereandnow/2024/12/16/ai-video-risks" target="_blank" class="npr-story-link" rel="noopener noreferrer">AI video promises and risks</a></p>
+                                        <p class="npr-story"><a href="https://www.wbur.org/hereandnow/2024/04/11/gaza-family-egypt" target="_blank" class="npr-story-link" rel="noopener noreferrer">Leaving Gaza: one family's future</a></p>
+                                        <p class="npr-story"><a href="https://www.wbur.org/hereandnow/2024/04/03/dungeons-and-dragons-hasbro" target="_blank" class="npr-story-link" rel="noopener noreferrer">One on one with Hasbro CEO</a></p>
+                                        <p class="npr-story"><a href="https://www.wbur.org/hereandnow/2024/09/13/medicaid-fraud-native-americans" target="_blank" class="npr-story-link" rel="noopener noreferrer">Medicaid fraud</a></p>
+                                        <p class="npr-story"><a href="https://www.wbur.org/hereandnow/2024/04/01/war-protests-israel" target="_blank" class="npr-story-link" rel="noopener noreferrer">Voices inside Israel</a></p>
+                                        <p class="npr-story"><a href="https://www.wbur.org/hereandnow/2024/08/06/tim-walz-harris-vp" target="_blank" class="npr-story-link" rel="noopener noreferrer">2024 Presidential Elections</a></p>
+                                        <p class="npr-story"><a href="https://www.wbur.org/hereandnow/2024/04/15/sudan-civil-war-american" target="_blank" class="npr-story-link" rel="noopener noreferrer">A year into Sudan's civil war</a></p>
+                                        <p class="npr-story"><a href="https://www.npr.org/2024/10/16/1211483970/here-now-anytime-10-16-2024" target="_blank" class="npr-story-link" rel="noopener noreferrer">Voters in Michigan</a></p>
                                     </div>
-                                    <div style="width: 1px; align-self: stretch; background-color: #e0e0e0;"></div>
-                                    <div style="flex: 1; min-width: 0;">
-                                        <img src="assets\ahImages\all_things_considered_banner.png" alt="NPR's All Things Considered" style="height: 50px; width: auto; max-width: 100%;">
-                                        <p></p>
-                                        <!-- Add All Things Considered story links here -->
+                                    <div class="npr-story-divider" aria-hidden="true"></div>
+                                    <div class="npr-story-column">
+                                        <img src="assets\ahImages\all_things_considered_banner.png" alt="NPR's All Things Considered" class="npr-program-banner">
+                                        <p class="npr-story"><a href="https://www.npr.org/2026/01/31/nx-s1-5684187/after-backsliding-democracy-often-comes-back-weaker-and-more-fragile" target="_blank" class="npr-story-link" rel="noopener noreferrer">Democracy after backsliding</a></p>
+                                        <p class="npr-story"><a href="https://www.npr.org/2026/01/16/nx-s1-5669437/how-a-video-game-about-grief-became-a-breakout-hit" target="_blank" class="npr-story-link" rel="noopener noreferrer">A video game on grief</a></p>
+                                        <p class="npr-story"><a href="https://www.npr.org/2025/12/19/nx-s1-5640134/the-negevs-arab-villages-brace-for-mass-expulsions" target="_blank" class="npr-story-link" rel="noopener noreferrer">Negev Arabs mass expulsion</a></p>
+                                        <p class="npr-story"><a href="https://www.npr.org/2026/01/07/nx-s1-5668287/the-role-secretary-marco-rubio-is-playing-in-venezuelas-future" target="_blank" class="npr-story-link" rel="noopener noreferrer">Secretary Rubio and Venezuela</a></p>
+                                        <p class="npr-story"><a href="https://www.npr.org/2026/02/15/nx-s1-5691562/chefs-soup-dumpling-lesson-doubles-as-a-love-letter-to-dcs-chinatown" target="_blank" class="npr-story-link" rel="noopener noreferrer">Chinese New Year challenge</a></p>
+                                        <p class="npr-story"><a href="https://www.npr.org/2025/12/27/nx-s1-5651322/gangs-use-sexual-violence-to-control-communities-in-haiti" target="_blank" class="npr-story-link" rel="noopener noreferrer">Sexual violence in Haiti</a></p>
+                                        <p class="npr-story"><a href="https://www.npr.org/2025/11/25/nx-s1-5619864/nprs-book-of-the-day-joe-sacco-the-once-and-future-riot" target="_blank" class="npr-story-link" rel="noopener noreferrer">Conversation with Joe Sacco</a></p>
+                                        <p class="npr-story"><a href="https://www.npr.org/2025/12/20/nx-s1-5639878/how-immigration-myths-from-the-past-still-shape-todays-debates" target="_blank" class="npr-story-link" rel="noopener noreferrer">Immigration myths</a></p>
                                     </div>
                                 </div>
                                 <div class="english-feature" style="margin-top: 22px !important;">Investigative Podcast: Theater of Spies</div>
