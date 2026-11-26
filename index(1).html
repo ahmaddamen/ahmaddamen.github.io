@@ -113,6 +113,29 @@
         }
     </style>
 
+
+    <style>
+        /* Mobile homepage only: a portrait with a readable, overlapping editorial panel. */
+        @media (max-width: 991px) {
+            #home > .container-fluid { padding: 0 !important; }
+            #home > .container-fluid > .row { display: flex !important; flex-direction: column; margin: 0 !important; }
+            #home > .container-fluid > .row > .col-md-6 { float: none !important; width: 100% !important; padding: 0 !important; }
+            #home .split-image.hero-1 { position: relative !important; width: 100% !important; height: auto !important; min-height: 0 !important; max-height: none !important; padding: 0 !important; background: none !important; overflow: hidden; }
+            #home .desktop-hero-portrait { display: block !important; width: 100% !important; height: clamp(280px, 90vw, 550px) !important; max-width: 100%; object-fit: cover; object-position: center 35%; }
+            #home .hero-split-content { box-sizing: border-box; position: relative !important; z-index: 1; width: 100% !important; max-width: none !important; height: auto !important; min-height: 0 !important; margin: -80px 0 0 !important; padding: 58px 24px 24px !important; background: linear-gradient(to bottom, rgba(17,17,17,0) 0, rgba(17,17,17,.88) 65px, #111 120px); overflow: visible !important; }
+            #home .hero-split-intro { position: static !important; transform: none !important; width: 100% !important; max-width: 560px !important; height: auto !important; margin: 0 auto !important; padding: 0 !important; text-align: left !important; }
+            #home .contact-block.home-v2 { display: none; }
+            #home .hero-split-intro .heading { color: #fff !important; font-size: clamp(34px, 8.8vw, 49px) !important; line-height: 1.12 !important; margin: 0 0 12px !important; text-shadow: 0 2px 12px rgba(0,0,0,.5); }
+            #home .hero-split-intro .grey-text { color: #eee !important; font-size: 16px !important; line-height: 1.55 !important; letter-spacing: 0 !important; margin: 0 0 18px !important; }
+            #home .hero-split-intro > .link-button { display: flex !important; position: relative !important; align-items: center; width: 100% !important; min-height: 44px; height: auto !important; margin: 0 !important; padding: 9px 10px 9px 15px !important; border: 0 !important; border-left: 2px solid #f0a34a !important; border-bottom: 1px solid rgba(255,255,255,.18) !important; background: transparent !important; color: #fff !important; text-decoration: none !important; box-shadow: none !important; }
+            #home .hero-split-intro > .link-button .line-button-text { position: relative !important; color: #fff !important; font-size: 16px !important; line-height: 1.4 !important; margin: 0 !important; padding: 0 !important; white-space: normal; }
+            #home .hero-split-intro > .link-button .color-hover { display: none !important; }
+            #home .hero-split-intro > .link-button::after { content: "\2192"; margin-left: auto; color: #f0a34a; font-size: 18px; padding-left: 12px; }
+            #home .hero-split-intro > .link-button:focus-visible { outline: 2px solid #f0a34a; outline-offset: 2px; }
+            #home .location-block.home-v2 { display: none !important; }
+        }
+    </style>
+
 </head>
 
 <body id="page-top">
@@ -168,6 +191,7 @@
 
                 <ul class="nav navbar-nav text-center text-small text-uppercase">
                     <li class="page-scroll"><a href="#home">Home</a></li>
+                    <li class="page-scroll"><a href="#work-experiences">About Me</a></li>
                     <li class="page-scroll"><a href="mailto:damenpro@gmail.com" target="_blank">Request Resume</a></li>
                     <li class="page-scroll"><a href="#portfolio">Highlights</a></li>
                     <li class="page-scroll"><a href="#music">Music</a></li>
@@ -208,13 +232,13 @@
                                     <h1 class="heading">Ahmad Damen</h1>
                                     <p class="grey-text">Supervising editor and music composer with 15+ years as an award-winning storyteller in print, audio and film.</p>
                                     <a href="#work-experiences" class="button link-button w-inline-block">
-                                        <div class="line-button-text">The Story So Far</div><div class="color-hover left"></div>
+                                        <div class="line-button-text">The Story So Far</div><div class="color-hover left"></div></a>
                                          <a href="#portfolio" class="button link-button w-inline-block">
-                                        <div class="line-button-text">Career Highlights</div><div class="color-hover left"></div>
+                                        <div class="line-button-text">Career Highlights</div><div class="color-hover left"></div></a>
                                            <a href="#music" class="button link-button w-inline-block">
-                                        <div class="line-button-text">Music</div><div class="color-hover left"></div>
+                                        <div class="line-button-text">Music</div><div class="color-hover left"></div></a>
                                                 <a href="mailto:damenpro@gmail.com" target="_blank" class="button link-button w-inline-block">
-                                         <div class="line-button-text">Request Resume</div><div class="color-hover left"></div>
+                                         <div class="line-button-text">Request Resume</div><div class="color-hover left"></div></a>
                                            <a href="#contact" class="button link-button w-inline-block">
                                         <div class="line-button-text">Contact</div><div class="color-hover left"></div>
                                               

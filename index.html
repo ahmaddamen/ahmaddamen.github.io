@@ -136,6 +136,42 @@
         }
     </style>
 
+
+    <style>
+        /* Refined homepage: override theme widths and unify the portrait and text. */
+        #home > .container-fluid, #home > .container-fluid > .row { width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+        #home > .container-fluid > .row { position: relative !important; isolation: isolate; background: #111; }
+        #home > .container-fluid > .row::before, #home > .container-fluid > .row::after { display: none !important; }
+        #home > .container-fluid > .row > .col-md-6 { max-width: none !important; min-width: 0 !important; margin: 0 !important; padding: 0 !important; float: none !important; }
+        #home .split-image.hero-1 { width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important; position: relative !important; inset: auto !important; transform: none !important; background: none !important; overflow: hidden !important; }
+        #home .desktop-hero-portrait { display: block !important; position: static !important; width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important; object-fit: cover; transform: none !important; }
+        @media (max-width: 991px) {
+            #home > .container-fluid > .row { align-items: stretch !important; }
+            #home > .container-fluid > .row > .col-md-6 { width: 100% !important; flex: 0 0 auto !important; position: relative !important; inset: auto !important; }
+            #home .desktop-hero-portrait { height: clamp(300px, 100vw, 620px) !important; object-position: center 15% !important; }
+        }
+        @media (min-width: 992px) {
+            #home > .container-fluid > .row { display: grid !important; grid-template-columns: 1fr; min-height: 100vh; }
+            #home > .container-fluid > .row > .col-md-6:first-child { position: absolute !important; inset: 0 auto 0 0 !important; width: 72% !important; height: 100% !important; z-index: 0; }
+            #home .split-image.hero-1 { height: 100% !important; }
+            #home .desktop-hero-portrait { height: 100% !important; object-position: left center; }
+            #home .split-image.hero-1::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 38%, rgba(17,17,17,.30) 58%, rgba(17,17,17,.90) 83%, #111 100%); pointer-events: none; }
+            #home > .container-fluid > .row > .col-md-6:nth-child(2) { grid-area: 1 / 1; position: relative !important; align-self: center; justify-self: end; width: 48% !important; z-index: 1; }
+            #home .hero-split-content { box-sizing: border-box; position: relative !important; inset: auto !important; width: 100% !important; max-width: none !important; height: auto !important; min-height: 0 !important; margin: 0 !important; padding: 80px clamp(36px, 5vw, 100px) 80px 24px !important; background: transparent !important; transform: none !important; }
+            #home .hero-split-intro { position: static !important; transform: none !important; width: 100% !important; max-width: 620px !important; height: auto !important; margin: 0 !important; padding: 0 !important; text-align: left !important; }
+            #home .contact-block.home-v2 { display: none !important; }
+            #home .hero-split-intro .heading { color: #fff !important; font-size: clamp(44px, 4.5vw, 76px) !important; line-height: 1.12 !important; margin: 0 0 18px !important; text-shadow: 0 2px 12px rgba(0,0,0,.45); }
+            #home .hero-split-intro .grey-text { color: #eee !important; font-size: clamp(17px, 1.35vw, 22px) !important; line-height: 1.6 !important; letter-spacing: 0 !important; margin: 0 0 26px !important; }
+            #home .hero-split-intro > .link-button { display: flex !important; position: relative !important; align-items: center; justify-content: space-between; width: 100% !important; min-height: 48px; height: auto !important; margin: 0 !important; padding: 12px 14px 12px 18px !important; border: 0 !important; border-left: 2px solid #f0a34a !important; border-bottom: 1px solid rgba(255,255,255,.18) !important; background: transparent !important; color: #fff !important; text-decoration: none !important; box-shadow: none !important; }
+            #home .hero-split-intro > .link-button .line-button-text { position: relative !important; inset: auto !important; color: #fff !important; font-size: clamp(17px, 1.25vw, 22px) !important; line-height: 1.4 !important; margin: 0 !important; padding: 0 !important; white-space: normal; transform: none !important; }
+            #home .hero-split-intro > .link-button .color-hover { display: none !important; }
+            #home .hero-split-intro > .link-button::after { content: "\2192"; margin-left: auto; color: #f0a34a; font-size: 20px; padding-left: 12px; }
+            #home .hero-split-intro > .link-button:hover { background: rgba(255,255,255,.07) !important; }
+            #home .hero-split-intro > .link-button:focus-visible { outline: 2px solid #f0a34a; outline-offset: 2px; }
+            #home .location-block.home-v2 { display: none !important; }
+        }
+    </style>
+
 </head>
 
 <body id="page-top">
@@ -192,7 +228,6 @@
                 <ul class="nav navbar-nav text-center text-small text-uppercase">
                     <li class="page-scroll"><a href="#home">Home</a></li>
                     <li class="page-scroll"><a href="#work-experiences">About Me</a></li>
-                    <li class="page-scroll"><a href="mailto:damenpro@gmail.com" target="_blank">Request Resume</a></li>
                     <li class="page-scroll"><a href="#portfolio">Highlights</a></li>
                     <li class="page-scroll"><a href="#music">Music</a></li>
                    <!-- <li class="page-scroll"><a href="#writing">Writing</a></li> -->
